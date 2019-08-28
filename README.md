@@ -1,7 +1,6 @@
-# demo-lp
+# ランディングページ サンプル
 
-This is a demonstration site of a landing page.
-
+これは https://pinalto.github.io/demo-lp/ で公開しているLPのソースです。
 
 ## Build Setup
 
@@ -19,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
