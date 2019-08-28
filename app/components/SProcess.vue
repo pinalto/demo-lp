@@ -12,13 +12,13 @@
       </my-section-title>
       <figure class="movie">
         <video
-          id="video"
           class="video"
           src="images/hd0109.mov"
           preload="metadata"
           loop
           playsinline
           muted
+          @loadedmetadata="videoLoaded"
         />
       </figure>
     </div>
@@ -32,12 +32,10 @@ export default {
   components: {
     MySectionTitle
   },
-  mounted() {
-    this.$el
-      .querySelector('#video')
-      .addEventListener('loadedmetadata', function(event) {
-        event.target.play()
-      })
+  methods: {
+    videoLoaded: event => {
+      event.target.play()
+    }
   }
 }
 </script>
