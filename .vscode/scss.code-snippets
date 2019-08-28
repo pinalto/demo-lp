@@ -1,0 +1,23 @@
+{
+  "PC media query": {
+		"prefix": "pc",
+		"body": [
+			"@include pc {\n  $1\n}",
+		],
+		"description": "media query"
+	},
+  "Tablet media query": {
+		"prefix": "tab",
+		"body": [
+			"@include tablet {\n  $1\n}",
+		],
+		"description": "media query"
+	},
+  "SP media query": {
+		"prefix": "sp",
+		"body": [
+			"@include sp {\n  $1\n}",
+		],
+		"description": "media query"
+	}
+}

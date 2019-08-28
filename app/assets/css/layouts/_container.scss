@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+  padding: 0 10vw;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include pc {
+    width: 1230px;
+
+    &--narrow {
+      width: 730px;
+    }
+
+  }
+  &--full {
+    padding: 0;
+    width: 100%;
+  }
+}

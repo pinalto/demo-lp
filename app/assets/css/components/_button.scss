@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  padding: 20px 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: $colHighlight;
+  color: $colBackground;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  &:link, &:visited {
+    color: $colBackground;
+  }
+}

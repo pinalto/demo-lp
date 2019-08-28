@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include tablet {
+    margin: 0 -15px;
+  }
+}
+
+.col {
+  flex-grow: 1;
+  width: 100%;
+
+  @include tablet {
+    padding: 0 15px;
+
+    &--3 {
+      width: calc(3/12 * 100%);
+    }
+    &--6 {
+      width: calc(6/12 * 100%);
+    }
+    &--1-5 {
+      width: calc(1/5 * 100%);
+    }
+  }
+
+  @include pc {
+    &--1 {
+      width: calc(1/12 * 100%);
+    }
+    &--3 {
+      width: calc(3/12 * 100%);
+    }
+    &--6 {
+      width: calc(6/12 * 100%);
+    }
+    &--11 {
+      width: calc(11/12 * 100%);
+    }
+  }
+}
