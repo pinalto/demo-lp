@@ -67,6 +67,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   position: absolute;
+  z-index: 9999;
   width: 100%;
   top: 0;
   left: 0;
@@ -83,7 +84,6 @@ export default {
 
 .nav-panel {
   position: fixed;
-  z-index: 9999;
   top: 0;
   left: -100vw;
   max-width: 100vw;
