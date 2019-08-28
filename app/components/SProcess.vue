@@ -14,7 +14,7 @@
         <video
           id="video"
           class="video"
-          src="/images/hd0109.mov"
+          src="images/hd0109.mov"
           preload="metadata"
           loop
           playsinline
