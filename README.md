@@ -1,6 +1,13 @@
 # ランディングページ サンプル
 
-これは https://pinalto.github.io/demo-lp/ で公開しているLPのソースです。
+これはポートフォリオ用LPのソースです。
+
+完成形はこちらでご覧ください → https://pinalto.github.io/demo-lp/ 
+
+## キーワード
+
+- レスポンシブデザイン
+- Vue.js / Nuxt.js / SCSS
 
 ## Build Setup
 
