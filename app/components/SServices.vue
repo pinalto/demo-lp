@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-1.png" alt="" />
             </figure>
@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-2.png" alt="" />
             </figure>
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-3.png" alt="" />
             </figure>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-4.png" alt="" />
             </figure>
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-5.png" alt="" />
             </figure>
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-6.png" alt="" />
             </figure>
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-7.png" alt="" />
             </figure>
@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="col col--3">
-          <div class="card">
+          <div v-observe-visibility="observerOptions" class="card">
             <figure class="icon">
               <img src="@/assets/imgs/service-8.png" alt="" />
             </figure>
@@ -94,6 +94,28 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      observerOptions: {
+        callback: this.visibilityChanged,
+        intersection: {
+          threshold: 0.5
+        }
+      }
+    }
+  },
+  methods: {
+    visibilityChanged(isVisible, { target }) {
+      isVisible
+        ? target.classList.add('visible')
+        : target.classList.remove('visible')
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .services {
@@ -109,6 +131,14 @@
   min-width: 170px;
   text-align: center;
   padding: 30px 8px;
+  opacity: 0;
+  transform: scale(2.5);
+  transition: 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .icon {

@@ -4,7 +4,7 @@
       <div class="numbers">
         <div class="row">
           <div class="col col--3">
-            <div class="card">
+            <div v-observe-visibility="visibilityChanged" class="card">
               <figure class="icon">
                 <img src="@/assets/imgs/number-1.png" alt="" />
               </figure>
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="col col--3">
-            <div class="card">
+            <div v-observe-visibility="visibilityChanged" class="card">
               <figure class="icon">
                 <img src="@/assets/imgs/number-2.png" alt="" />
               </figure>
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="col col--3">
-            <div class="card">
+            <div v-observe-visibility="visibilityChanged" class="card">
               <figure class="icon">
                 <img src="@/assets/imgs/number-3.png" alt="" />
               </figure>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="col col--3">
-            <div class="card">
+            <div v-observe-visibility="visibilityChanged" class="card">
               <figure class="icon">
                 <img src="@/assets/imgs/number-4.png" alt="" />
               </figure>
@@ -52,6 +52,18 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    visibilityChanged(isVisible, { target }) {
+      isVisible
+        ? target.classList.add('visible')
+        : target.classList.remove('visible')
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .numbers-wrapper {
@@ -69,9 +81,17 @@
   display: flex;
   padding: 16px 10px;
   height: 100%;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: 0.4s ease;
   @include tablet {
     padding: 0;
   }
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .icon {

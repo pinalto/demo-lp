@@ -27,6 +27,7 @@
     "nuxt-webfontloader": "^1.1.0",
     "ress": "^1.2.2",
     "smoothscroll-polyfill": "^0.4.4",
+    "vue-observe-visibility": "^0.4.4",
     "vue-slick": "^1.1.15",
     "webp-loader": "^0.5.0"
   },

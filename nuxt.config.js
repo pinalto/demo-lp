@@ -48,7 +48,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '@/plugins/vendor/modernizr-custom.js', mode: 'client' }
+    { src: '@/plugins/vendor/modernizr-custom.js', mode: 'client' },
+    { src: '@/plugins/observe-visibility', mode: 'client'}
   ],
 
   /*
