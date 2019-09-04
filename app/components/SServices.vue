@@ -132,13 +132,13 @@ export default {
   text-align: center;
   padding: 30px 8px;
   opacity: 0;
-  transform: scale(2.5);
+  transform: scaleY(3);
   transition: 0.5s ease;
 }
 
 .visible {
   opacity: 1;
-  transform: scale(1);
+  transform: scaleY(1);
 }
 
 .icon {
