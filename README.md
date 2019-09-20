@@ -13,15 +13,15 @@
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ yarn dev
 
 # build for production and launch server
-$ yarn run build
+$ yarn build
 $ yarn start
 
-# generate static project
-$ yarn run generate
+# deploy to GitHub Pages
+$ yarn deploy
 ```
